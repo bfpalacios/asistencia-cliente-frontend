@@ -1,0 +1,42 @@
+<h3>Crear Clientes</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" class="form-control" id="nombre" required [(ngModel)]="cliente.nombre" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">DNI </label>
+      <input type="text" class="form-control" id="dni" required [(ngModel)]="cliente.dni" name="dni">
+    </div>
+
+    <div class="form-group">
+      <label for="name">EDAD</label>
+      <input type="text" class="form-control" id="edad" required [(ngModel)]="cliente.edad" name="edad">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Producto</label>
+      <input type="text" class="form-control" id="categoriaCrediticia" required [(ngModel)]="cliente.categoriaCrediticia" name="categoriaCrediticia">
+	</div> 
+	
+
+    <div class="form-group">
+      <label for="name">Calificacion</label>
+      <input type="text" class="form-control" id="calificacion" required [(ngModel)]="cliente.idProducto" name="producto">
+    </div> 
+
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="cliente.email" name="email">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Registro satisfactorio</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
